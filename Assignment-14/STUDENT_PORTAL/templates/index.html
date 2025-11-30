@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Info Portal</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Link to external JS (deferred) -->
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <h1 class="logo">Student Info Portal</h1>
+        <p class="tagline">Your one-stop platform for student information</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Students</a>
+        <a href="#" class="nav-link">Add Student</a>
+        <a href="#" class="nav-link">Contact</a>
+
+        <!-- Mobile menu toggle (pure CSS/JS could be added later) -->
+    </nav>
+
+    <!-- Centered main content -->
+    <main class="container">
+        <section class="welcome">
+            <h2>Welcome!</h2>
+            <p>Use the navigation menu to browse or manage student information.</p>
+        </section>
+
+        <!-- Login form for Task #3 -->
+        <section class="card">
+            <h3>Login</h3>
+            <form id="loginForm" method="POST" action="/login">
+                <div class="form-row">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Enter username">
+                    <small class="error" id="userError" aria-live="polite"></small>
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Enter password">
+                    <small class="error" id="passError" aria-live="polite"></small>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© 2025 Student Info Portal | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
